@@ -11,8 +11,11 @@ public class RecorreArbol<T> {
 	public List<T> recorrer(ArbolBajador arbol, int salto) {
 
 		switch(arbol.tipoNodo) {
+		
 		case VALOR:
-			recorrido.add(((ArbolBajadorValor<T>) arbol).getValor());	
+			if (salto == 0) {
+				recorrido.add(((ArbolBajadorValor<T>) arbol).getValor());
+			}
 			break;
 		case SALTEADOR:
 			salto = ((ArbolBajadorSalteador) arbol).getValor(); 			
@@ -25,6 +28,11 @@ public class RecorreArbol<T> {
 		default:
 			break;
 			
+		}
+		
+		if (salto > 0)
+		{
+			salto = salto - 1;
 		}
 	
 		if (arbol.getNodos() != null  && !arbol.getNodos().isEmpty()) {
