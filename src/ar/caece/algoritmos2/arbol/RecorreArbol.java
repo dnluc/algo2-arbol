@@ -23,6 +23,9 @@ public class RecorreArbol<T> {
 		case MODIFICADOR:
 			if (salto > 0) {
 				salto = salto + ((ArbolBajadorModificador) arbol).getValor();
+				if (salto < 0) {
+					salto = 0;
+				}
 			}
 			break;
 		default:
