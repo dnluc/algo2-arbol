@@ -2,7 +2,7 @@ package ar.caece.algoritmos2.arbol;
 
 import java.util.List;
 
-public class Main {
+public class ArbolMain {
 
 	public static void main(String[] args) {
 	
@@ -14,6 +14,19 @@ public class Main {
 		List<String> recorrido = recorreArbol.recorrer(arbol, 0);
 		
 		System.out.println(recorrido);
+		
+		int a = TipoNodo.values().length;
+		
+		Integer x = 2;
+		
+		Integer w = x;
+		
+		Float f = 1.3f;
+		
+		Float s = f;
+		
+		
+		
 		
 	}
 

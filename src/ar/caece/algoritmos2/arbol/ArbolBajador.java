@@ -2,7 +2,7 @@ package ar.caece.algoritmos2.arbol;
 
 import java.util.List;
 
-public class ArbolBajador  {
+public abstract class ArbolBajador  {
 
 	List<ArbolBajador> nodos;
 	
@@ -19,5 +19,7 @@ public class ArbolBajador  {
 	public TipoNodo getTipoNodo() {
 		return tipoNodo;
 	}
+	
+	
 	
 }

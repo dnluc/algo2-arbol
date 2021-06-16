@@ -1,5 +1,7 @@
 package ar.caece.algoritmos2.arbol;
 
+import java.util.List;
+
 public class ArbolBajadorValor<T> extends ArbolBajador {
 
 	private T valor;
@@ -15,5 +17,6 @@ public class ArbolBajadorValor<T> extends ArbolBajador {
 	public void setValor(T valor) {
 		this.valor = valor;
 	}
+	
 	
 }
