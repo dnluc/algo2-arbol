@@ -15,18 +15,7 @@ public class ArbolMain {
 		
 		System.out.println(recorrido);
 		
-		int a = TipoNodo.values().length;
-		
-		Integer x = 2;
-		
-		Integer w = x;
-		
-		Float f = 1.3f;
-		
-		Float s = f;
-		
-		
-		
+
 		
 	}
 
