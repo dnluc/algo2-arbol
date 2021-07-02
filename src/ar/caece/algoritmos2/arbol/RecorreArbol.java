@@ -10,44 +10,26 @@ public class RecorreArbol<T> {
 	@SuppressWarnings("unchecked")
 	public List<T> recorrer(ArbolBajador arbol, int salto) {
 
-//		switch(arbol.tipoNodo) {
-//		case VALOR:
-//			if (salto == 0) {
-//				recorrido.add(((ArbolBajadorValor<T>) arbol).getValor());
-//			}
-//			break;
-//		case SALTEADOR:
-//			salto = ((ArbolBajadorSalteador) arbol).getValor(); 			
-//			break;
-//		case MODIFICADOR:
-//			if (salto > 0) {
-//				salto = salto + ((ArbolBajadorModificador) arbol).getValor();
-//				if (salto < 0) {
-//					salto = 0;
-//				}
-//			}
-//			break;
-//		default:
-//			break;
-//		}
-
-		
-		if (arbol instanceof ArbolBajadorValor) {
+		switch(arbol.tipoNodo) {
+		case VALOR:
 			if (salto == 0) {
 				recorrido.add(((ArbolBajadorValor<T>) arbol).getValor());
 			}
-		} else if (arbol instanceof ArbolBajadorSalteador) {
-			salto = ((ArbolBajadorSalteador) arbol).getValor();
-			
-		} else if (arbol instanceof ArbolBajadorModificador && salto > 0) {
+			break;
+		case SALTEADOR:
+			salto = ((ArbolBajadorSalteador) arbol).getValor(); 			
+			break;
+		case MODIFICADOR:
+			if (salto > 0) {
 				salto = salto + ((ArbolBajadorModificador) arbol).getValor();
 				if (salto < 0) {
 					salto = 0;
 				}
+			}
+			break;
+		default:
+			break;
 		}
-		
-		
-		
 		
 		if (salto > 0)
 		{
